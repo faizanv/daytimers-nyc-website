@@ -1,0 +1,478 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="application-page">
+		<section class="form-shell" aria-labelledby="form-title">
+			<p class="eyebrow">Subcontinental Studios</p>
+			<h1 id="form-title">APPLICATION</h1>
+			<p class="intro">
+				Share your details below and we will follow up with the next steps.
+			</p>
+			<p class="required-note"><span class="required-mark" aria-hidden="true">*</span> Required fields</p>
+
+			<form
+				class="application-form"
+				action="https://api.web3forms.com/submit"
+				method="POST"
+			>
+				<input type="hidden" name="access_key" value="62b6451b-2281-47ab-b3a2-ffc60a6452b9" />
+				<input type="hidden" name="redirect" value="/thanks" />
+
+				<fieldset class="form-section">
+					<legend>Personal information</legend>
+					<div class="field-grid">
+						<div class="field">
+							<label for="name">Full name <span class="required-mark" aria-hidden="true">*</span></label>
+							<input id="name" name="name" type="text" autocomplete="name" required />
+						</div>
+						<div class="field">
+							<label for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+							<input id="email" name="email" type="email" autocomplete="email" required />
+						</div>
+						<div class="field">
+							<label for="artist-name">Artist name <span class="required-mark" aria-hidden="true">*</span></label>
+							<input id="artist-name" name="artistName" type="text" autocomplete="nickname" required />
+						</div>
+						<div class="field">
+							<label for="social-media">Social media <span class="required-mark" aria-hidden="true">*</span></label>
+							<input id="social-media" name="socialMedia" type="text" placeholder="@ArtistName" required />
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="form-section">
+					<legend>About you</legend>
+					<div class="field-grid">
+						<div class="field">
+							<label for="pronouns">Pronouns</label>
+							<input id="pronouns" name="pronouns" type="text" />
+						</div>
+						<div class="field">
+							<label for="race-ethnicity">Race / ethnicity</label>
+							<input id="race-ethnicity" name="raceEthnicity" type="text" />
+						</div>
+						<div class="field">
+							<label for="languages">Languages spoken / performed in</label>
+							<input id="languages" name="languages" type="text" />
+						</div>
+						<div class="field">
+							<label for="experience">Music experience</label>
+							<select id="experience" name="experience">
+								<option value="">Select one</option>
+								<option>Beginner</option>
+								<option>Intermediate</option>
+								<option>Advanced</option>
+							</select>
+						</div>
+						<div class="field">
+							<label for="age">Age</label>
+							<input id="age" name="age" type="number" min="13" max="120" />
+						</div>
+						<div class="field">
+							<label for="location">Location</label>
+							<input id="location" name="location" type="text" autocomplete="address-level2" />
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="form-section">
+					<legend>Session details</legend>
+					<div class="field">
+						<fieldset class="choice-group">
+							<legend>Can you attend on this date? <span class="required-mark" aria-hidden="true">*</span></legend>
+							<label class="choice">
+								<input name="attendance" type="checkbox" value="2026-11-07" required />
+								<span>Saturday, November 7, 2026 · 10am–7pm</span>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="field">
+						<fieldset class="choice-group">
+							<legend>I identify as <span class="required-mark" aria-hidden="true">*</span></legend>
+							<div class="choice-grid">
+								<label class="choice"><input name="identity" type="checkbox" value="Producer" /> <span>Producer</span></label>
+								<label class="choice"><input name="identity" type="checkbox" value="Songwriter" /> <span>Songwriter</span></label>
+								<label class="choice"><input name="identity" type="checkbox" value="Musician/Singer" /> <span>Musician / singer</span></label>
+								<label class="choice"><input name="identity" type="checkbox" value="Other" /> <span>Other</span></label>
+							</div>
+						</fieldset>
+					</div>
+
+					<div class="field">
+						<label for="identity-other">For other <span class="required-mark" aria-hidden="true">*</span></label>
+						<input id="identity-other" name="identityOther" type="text" required />
+					</div>
+
+					<div class="field">
+						<label for="tools">Tools / instruments you like to use <span class="required-mark" aria-hidden="true">*</span></label>
+						<textarea id="tools" name="tools" rows="3" placeholder="DAW, instrument, hardware, etc." required></textarea>
+					</div>
+
+					<div class="field">
+						<label for="creating-music">How long have you been creating music? <span class="required-mark" aria-hidden="true">*</span></label>
+						<select id="creating-music" name="creatingMusic" required>
+							<option value="">Select one</option>
+							<option>Less than 1 year</option>
+							<option>1–2 years</option>
+							<option>2–5 years</option>
+							<option>More than 5 years</option>
+						</select>
+					</div>
+				</fieldset>
+
+				<fieldset class="form-section">
+					<legend>Portfolio and background</legend>
+					<div class="field">
+						<label for="portfolio-links">Links to portfolio <span class="required-mark" aria-hidden="true">*</span></label>
+						<textarea id="portfolio-links" name="portfolioLinks" rows="3" placeholder="SoundCloud, EPK, website, etc." required></textarea>
+					</div>
+					<div class="field">
+						<label for="portfolio-highlights">Highlight 1 or 2 items from your portfolio <span class="required-mark" aria-hidden="true">*</span></label>
+						<textarea id="portfolio-highlights" name="portfolioHighlights" rows="4" placeholder="Project name, description, and link" required></textarea>
+					</div>
+					<div class="field">
+						<label for="musical-background">Tell us about your musical background / experience <span class="required-mark" aria-hidden="true">*</span></label>
+						<textarea id="musical-background" name="musicalBackground" rows="5" required></textarea>
+					</div>
+				</fieldset>
+
+				<fieldset class="form-section">
+					<legend>Collaboration</legend>
+					<div class="field">
+						<label for="collaborator-type">What type of collaborator are you looking for? <span class="required-mark" aria-hidden="true">*</span></label>
+						<input id="collaborator-type" name="collaboratorType" type="text" placeholder="Vocalist, instrumentalist, etc." required />
+					</div>
+					<div class="field">
+						<label for="fit">Why will you be a good fit for Daytimers NYC's first collaboration session? <span class="required-mark" aria-hidden="true">*</span></label>
+						<textarea id="fit" name="fit" rows="5" required></textarea>
+					</div>
+				</fieldset>
+
+				<label class="choice confirmation">
+					<input name="confirmDetails" type="checkbox" value="confirmed" required />
+					<span>I confirm that my application details are correct <span class="required-mark" aria-hidden="true">*</span></span>
+				</label>
+
+				<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+				<button type="submit">Send Application <span aria-hidden="true">↗</span></button>
+			</form>
+		</section>
+	</main>
+</Layout>
+
+<script>
+	const submissionToken = 'daytimers-application-submitted';
+	const applicationForm = document.querySelector<HTMLFormElement>('.application-form');
+	const identityChoices = applicationForm?.querySelectorAll<HTMLInputElement>('input[name="identity"]');
+	const formStatus = document.querySelector<HTMLParagraphElement>('#form-status');
+	const submitButton = applicationForm?.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+	if (localStorage.getItem(submissionToken) === 'true') {
+		window.location.replace('/thanks');
+	}
+
+	function validateIdentityChoices() {
+		if (!identityChoices?.length) return;
+
+		const hasSelection = Array.from(identityChoices).some((choice) => choice.checked);
+		identityChoices[0].setCustomValidity(hasSelection ? '' : 'Select at least one identity.');
+	}
+
+	async function handleSubmit(event: SubmitEvent) {
+		validateIdentityChoices();
+
+		if (!applicationForm?.checkValidity()) {
+			event.preventDefault();
+			return;
+		}
+
+		event.preventDefault();
+		submitButton && (submitButton.disabled = true);
+		if (formStatus) formStatus.textContent = 'Sending your application...';
+
+		try {
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				body: new FormData(applicationForm),
+			});
+			const result = (await response.json()) as { success?: boolean; message?: string };
+
+			if (!response.ok || !result.success) {
+				throw new Error(result.message || 'Application submission failed.');
+			}
+
+			localStorage.setItem(submissionToken, 'true');
+			window.location.replace('/thanks');
+		} catch (error) {
+			submitButton && (submitButton.disabled = false);
+			if (formStatus) {
+				formStatus.textContent = error instanceof Error ? error.message : 'Something went wrong. Please try again.';
+			}
+		}
+	}
+
+	identityChoices?.forEach((choice) => choice.addEventListener('change', validateIdentityChoices));
+	applicationForm?.addEventListener('submit', handleSubmit);
+</script>
+
+<style>
+	.application-page {
+		display: grid;
+		place-items: center;
+		min-height: 100vh;
+		padding: clamp(1.5rem, 5vw, 4rem);
+		background: linear-gradient(135deg, var(--maroon-wash), transparent 38%), var(--sand);
+	}
+
+	.form-shell {
+		width: min(100%, 44rem);
+		padding: clamp(2rem, 6vw, 5rem);
+		border: 1px solid var(--sand-line);
+		background: var(--cream-wash);
+		box-shadow: var(--poster-shadow);
+	}
+
+	.eyebrow {
+		margin: 0 0 1rem;
+		color: var(--maroon);
+		font-size: 0.7rem;
+		font-weight: 800;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		margin: 0;
+		color: var(--maroon);
+		font-family: var(--display-font);
+		font-size: clamp(3rem, 9vw, 5.5rem);
+		line-height: 0.9;
+		text-transform: uppercase;
+	}
+
+	.intro {
+		max-width: 28rem;
+		margin: 1.5rem 0 2.5rem;
+		font-size: 1.05rem;
+		line-height: 1.5;
+	}
+
+	.required-note {
+		margin: -1.5rem 0 2rem;
+		color: var(--charcoal);
+		font-size: 0.8rem;
+	}
+
+	.required-mark {
+		color: var(--magenta);
+		font-weight: 800;
+	}
+
+	.application-form {
+		display: grid;
+		gap: 0.65rem;
+	}
+
+	.form-section {
+		display: grid;
+		gap: 1rem;
+		margin: 0;
+		padding: 1.8rem 0 0;
+		border: 0;
+		border-top: 1px solid var(--muted-line);
+	}
+
+	.form-section legend {
+		padding: 0;
+		color: var(--maroon);
+		font-family: var(--display-font);
+		font-size: 1.5rem;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+	}
+
+	.field-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem 1.5rem;
+	}
+
+	.field {
+		display: grid;
+		gap: 0.35rem;
+	}
+
+	.choice-group {
+		display: grid;
+		gap: 0.75rem;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	.choice-group legend {
+		padding: 0;
+		color: var(--maroon);
+		font-size: 0.75rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.application-form .field > label {
+		margin-top: 0.8rem;
+		color: var(--maroon);
+		font-size: 0.75rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.application-form input:not([type='checkbox']):not([type='hidden']),
+	.application-form textarea,
+	.application-form select {
+		width: 100%;
+		padding: 0.9rem 0;
+		border: 0;
+		border-bottom: 2px solid var(--muted-line);
+		border-radius: 0;
+		background: transparent;
+		color: var(--charcoal);
+		font: inherit;
+		font-size: 1.05rem;
+		outline: none;
+	}
+
+	.application-form textarea {
+		min-height: 4.5rem;
+		padding: 0.8rem;
+		border: 1px solid var(--muted-line);
+		resize: vertical;
+	}
+
+	.application-form select {
+		appearance: none;
+		background-image: linear-gradient(45deg, transparent 50%, var(--magenta) 50%), linear-gradient(135deg, var(--magenta) 50%, transparent 50%);
+		background-position: calc(100% - 0.8rem) 1.25rem, calc(100% - 0.45rem) 1.25rem;
+		background-repeat: no-repeat;
+		background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+		padding-right: 1.5rem;
+	}
+
+	.application-form input:not([type='checkbox']):not([type='hidden']):focus,
+	.application-form select:focus {
+		border-bottom-color: var(--magenta);
+	}
+
+	.application-form textarea:focus {
+		border-color: var(--magenta);
+	}
+
+	.application-form input:focus-visible,
+	.application-form textarea:focus-visible,
+	.application-form select:focus-visible,
+	.application-form button:focus-visible {
+		outline: 3px solid var(--magenta);
+		outline-offset: 3px;
+	}
+
+	.choice-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.7rem;
+	}
+
+	.choice {
+		display: flex;
+		align-items: center;
+		gap: 0.55rem;
+		color: var(--charcoal);
+		font-size: 0.9rem;
+		line-height: 1.35;
+	}
+
+	.confirmation {
+		margin-top: 1rem;
+	}
+
+	.choice input {
+		accent-color: var(--magenta);
+		flex: 0 0 auto;
+		width: 1rem;
+		height: 1rem;
+		margin: 0;
+	}
+
+	.form-status {
+		min-height: 1.35em;
+		margin: 1rem 0 0;
+		color: var(--charcoal);
+		font-size: 0.85rem;
+		line-height: 1.4;
+	}
+
+	.application-form button {
+		justify-self: start;
+		margin-top: 1.8rem;
+		padding: 0.9rem 1.1rem;
+		border: 2px solid var(--magenta);
+		background: var(--magenta);
+		color: var(--cream);
+		cursor: pointer;
+		font: inherit;
+		font-size: 0.78rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		transition: transform 160ms ease, background 160ms ease;
+	}
+
+	.application-form button:hover,
+	.application-form button:focus-visible {
+		transform: translate(-0.2rem, -0.2rem);
+		border-color: var(--maroon);
+		background: var(--maroon);
+	}
+
+	.application-form button:disabled {
+		cursor: wait;
+		opacity: 0.65;
+		transform: none;
+	}
+
+	@media (forced-colors: active) {
+		.application-form select {
+			appearance: auto;
+			background-image: none;
+		}
+
+		.application-form input,
+		.application-form textarea,
+		.application-form select {
+			border-bottom-color: CanvasText;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.application-page {
+			place-items: start center;
+			padding: 5rem 1.25rem 2rem;
+		}
+
+		.form-shell {
+			padding: 2rem 1.35rem;
+		}
+
+		.field-grid,
+		.choice-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.application-form button {
+			width: 100%;
+		}
+	}
+</style>

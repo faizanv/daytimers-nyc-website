@@ -1,0 +1,15 @@
+:root {
+  --sand: #e4d3bc;
+  --maroon: #801e38;
+  --charcoal: #2b2321;
+  --magenta: #9e2d68;
+  --cream: #fff8ed;
+  --cream-wash: rgba(255, 248, 237, 0.38);
+  --display-font: Impact, "Arial Narrow", "Avenir Next", sans-serif;
+  --body-font: "Avenir Next", "Century Gothic", sans-serif;
+  --muted-line: rgba(43, 35, 33, 0.25);
+  --sand-line: rgba(228, 211, 188, 0.7);
+  --sand-muted: rgba(228, 211, 188, 0.25);
+  --poster-shadow: 0 1rem 2.5rem rgba(43, 35, 33, 0.22);
+  --maroon-wash: rgba(128, 30, 56, 0.08);
+}
