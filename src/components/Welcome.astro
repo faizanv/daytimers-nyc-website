@@ -1,14 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 import poster from '../assets/subcontinental_studios.jpeg';
 ---
 
 <main class="landing-page">
 	<section class="poster-panel" aria-label="Subcontinental Studios event poster">
 		<div class="poster-frame">
-			<img
-				src={poster.src}
+			<Image
+				src={poster}
 				alt="Daytimers NYC Subcontinental Studios event poster"
 				class="poster"
+				widths={[480, 640, 768, 1080]}
+				sizes="(max-width: 760px) 100vw, 50vw"
+				format="webp"
+				decoding="async"
 			/>
 		</div>
 	</section>
@@ -118,6 +123,7 @@ import poster from '../assets/subcontinental_studios.jpeg';
 		width: auto;
 		max-width: 100%;
 		height: auto;
+		aspect-ratio: 3 / 4;
 		max-height: calc(100vh - 6rem);
 		object-fit: contain;
 		border-radius: 0.12rem;
