@@ -17,7 +17,7 @@ import poster from '../assets/subcontinental_studios.jpeg';
 		<div class="content-inner">
 			<header class="hero-copy">
 				<p class="eyebrow">Daytimers New York presents</p>
-				<h1>Subcontinental<br /><em>Studios</em></h1>
+				<h1><span class="beat">Subcontinental</span><br /><em><span class="beat">Studios</span></em></h1>
 				<p class="intro">
 					A collaboration session for South Asian producers, songwriters, and artists with 3+ years of music-making experience in the NYC area. We especially welcome femme, trans, and non-binary creators, and everyone is encouraged to apply.
 				</p>
@@ -172,6 +172,39 @@ import poster from '../assets/subcontinental_studios.jpeg';
 	h1 em {
 		color: var(--magenta);
 		font-style: normal;
+	}
+
+	.beat {
+		--bpm: 70;
+		display: inline-block;
+		transform-origin: center;
+		animation: beat calc(60s / var(--bpm)) cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes beat {
+		0% {
+			transform: scale(1);
+		}
+
+		6% {
+			transform: scale(1.08);
+		}
+
+		30% {
+			transform: scale(0.99);
+		}
+
+		60%,
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.beat {
+			animation: none;
+		}
 	}
 
 	.intro {
